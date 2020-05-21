@@ -1,0 +1,98 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    background-color: black;
+    color: white !important;
+}
+
+hr {
+    border-color: white;
+}
+
+.puntero {
+    cursor: pointer;
+}
+
+.img-circle {
+    border-radius: 100%;
+    width: 150px;
+}
+
+.card-title,
+.card-text {
+    color: black;
+}
+
+.badge {
+    margin-left: 5px;
+}
+
+.btn-outline-success {
+    margin-left: 5px;
+}
+
+.img-thumb {
+    width: 50px;
+    height: 50px;
+}
+
+
+/* Animaciones */
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fast {
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+.drivers-list {
+    margin: 0;
+    padding: 0;
+}
+
+.drivers-list > li {
+    display: inline-block;
+    width: 20%;
+}
+
+caption {
+    caption-side: top;
+    text-align: center;
+    color: #fff;
+}
+
+.first {
+    background-color: #FFFFBF;
+    color: #000;
+}
+
+.second {
+    background-color: #DFDFDF;
+    color: #000;
+}
+
+.third {
+    background-color: #FFDF9F;
+    color: #000;
+}

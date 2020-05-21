@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-12">
+        <h1>{{ nameConstructor }}</h1>
+        <hr>
+
+        <table class="table table-sm table-dark col-6">
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Piloto</th>
+                    <th scope="col">Carreras</th>
+                    <th scope="col">Victorias</th>
+                    <th scope="col">Podios</th>
+                    <th scope="col">Puntos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let driver of driverStats; let i = index">
+                    <td>{{ i + 1 }}</td>
+                    <td>{{ driver.givenName }} {{ driver.familyName }}</td>
+                    <td>{{ driver.races }}</td>
+                    <td>{{ driver.victories }}</td>
+                    <td>{{ driver.podiums }}</td>
+                    <td>{{ driver.points }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

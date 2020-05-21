@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-12">
+        <h1>{{ nameCircuit }} <small>({{ nameLocality }} --- {{ nameCountry }})</small></h1>
+        <hr>
+
+        <table class="table table-sm table-dark col-6">
+            <thead>
+                <tr>
+                    <th scope="col">Año</th>
+                    <th scope="col">Piloto</th>
+                    <th scope="col">Constructor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let circuit of circuitStats;">
+                    <td>{{ circuit.season }}</td>
+                    <td>{{ circuit.Results[0].Driver.givenName }} {{ circuit.Results[0].Driver.familyName }}</td>
+                    <td>{{ circuit.Results[0].Constructor.name }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

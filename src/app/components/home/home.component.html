@@ -1,0 +1,17 @@
+<ul class="drivers-list">
+    <li (click)="verDriver(driver)" *ngFor="let driver of drivers; let i = index" class="puntero p-2">{{ i + 1 }} - {{ driver.givenName }} {{ driver.familyName }}</li>
+</ul>
+
+
+<!-- <div class="row row-cols-1 row-cols-md-4">
+    <div [id]="driver.driverId" class="col mb-3" *ngFor="let driver of drivers">
+        <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{ driver.givenName }} {{ driver.familyName }}</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+            </div>
+        </div>
+    </div>
+</div> -->

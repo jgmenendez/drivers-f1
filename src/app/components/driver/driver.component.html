@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-4">
+        <img *ngIf="driver.originalimage" [src]="driver.originalimage.source" alt="" class="img-fluid">
+        <img *ngIf="!driver.originalimage" src="./assets/noimage.png" alt="" class="img-fluid">
+    </div>
+
+    <div class="col-8">
+        <h1>
+            <img [src]="driverFlag" alt="" class="img-thumbnail"
+                style="display: inline-block; width: 60px; padding: 1px;">
+            {{ driver.title }}
+            <small>({{ driverAge }} años)</small>
+        </h1>
+        <hr>
+        <p>{{ driver.extract }}</p>
+        <table class="table table-sm table-dark">
+            <caption><h2>{{ driverRaces }} carreras --- {{ driverVictories }} victorias --- {{ driverPodiums }} podios --- {{ driverPoints }} puntos</h2></caption>
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Año</th>
+                    <th scope="col">Posición</th>
+                    <th scope="col">Constructor</th>
+                    <th scope="col">Puntos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr [ngClass]= "{'first': stat.Results[0].position == '1', 'second': stat.Results[0].position == '2', 'third': stat.Results[0].position =='3'}" *ngFor="let stat of driverStat; let i = index">
+                    <td>{{ i + 1 }}</td>
+                    <td>{{ stat.season }}</td>
+                    <td>{{ stat.Results[0].position }}</td>
+                    <td>{{ stat.Results[0].Constructor.name }}</td>
+                    <td *ngIf="stat.Results[0].points > 0">{{ stat.Results[0].points }}</td>
+                    <td *ngIf="stat.Results[0].points == 0">&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

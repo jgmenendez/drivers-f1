@@ -1,0 +1,3 @@
+<ul class="drivers-list">
+    <li (click)="verCircuit(circuit)" *ngFor="let circuit of circuits; let i = index" class="puntero p-2">{{ i + 1 }} - {{ circuit.circuitName }}</li>
+</ul>
